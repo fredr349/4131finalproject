@@ -1,11 +1,10 @@
 # 4131finalproject
 1. Project Type: Plan A
 2. Group Members Name: Nathen Slater and Thomas Fredrickson
-3. Link to live Application:
+3. Link to live Application: https://final-4131.herokuapp.com/
 4. Link to Github Code Repository: https://github.com/fredr349/4131finalproject
 5. List of Technologies/API's Used: Ipstack-api, bootstrap, flask, flask_sqlalchemy, WTForms
 6. Detailed Description of the project:
-You must provide a README that describes to the TAs how they should access and use your application.  This will aid them in grading.
 
 This code is partially an extension of Corey Schafer's Flask tutorial on YouTube. His tutorial covered the basics of building a site, and was helpful in learning how the login stuff worked. We extended the tutorial quite a bit. We added the feature of saving a post as a draft, and then being able to post from the drafts section. We also implemented the ability to "Like" and "Unlike" a post, which required creating a table that incorporates a many-to-many relationship.
 
