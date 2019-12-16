@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">{{ legend }}</legend>
+            <div class="form-group">
+                {{ form.title.label(class="form-control-label") }}
+                {% if form.title.errors %}
+                    {{ form.title(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.title.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.title(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+            <div class="form-group">
+                {{ form.content.label(class="form-control-label") }}
+                {% if form.content.errors %}
+                    {{ form.content(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.content.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.content(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+        </fieldset>
+
+                <!-- <form action="{{ url_for('new_post') }}" method="POST">
+                  <input class="btn btn-outline-info" type="post" value="Post" name="post">
+                </form>
+                <br>
+                <form action="{{ url_for('save_draft') }}" method="POST">
+                  <input class="btn btn-outline-info" type="draft" value="Save Draft" name="draft">
+                </form> -->
+        <div class="form-group">
+            {{ form.post(class="btn btn-outline-info") }}
+        </div>
+        <div class="form-group">
+            {{ form.draft(class="btn btn-outline-info") }}
+        </div>
+    </form>
+</div>
+{% endblock content%}
